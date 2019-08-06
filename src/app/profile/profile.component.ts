@@ -1,31 +1,23 @@
-import { Component, OnInit } from '@angular/core';
-import { ProfileServiceService } from '../profile-service.service';
-
+import { Component, OnInit, Input } from "@angular/core";
+import { ProfileService } from "../profile.service";
 
 @Component({
-  selector: 'profile',
-  templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.css']
+  selector: "profile",
+  templateUrl: "./profile.component.html",
+  styleUrls: ["./profile.component.css"]
 })
 export class ProfileComponent implements OnInit {
+  userProfile: any;
+  selectedAvatar: string;
 
-  constructor(private profileService: ProfileServiceService) {
-    this.apiService.getAnimals().subscribe(response => {
-      this.animals = response;
-    });
-  }
-  addNewAnimal(newAnimal) {
-    this.apiService.addAnimal(newAnimal).subscribe(response => {
-      this.animals = response;
-    });
-   }
-   updateAnAnimal(newname, oldname) {
-    this.apiService.updateAnimal(newname, oldname).subscribe(response => {
-      this.animals = response;
-    });
-  }
+  constructor(private profileService: ProfileService) {}
 
   ngOnInit() {
+    this.userProfile = this.profileService.getUserProfile();
+    this.selectedAvatar = this.profileService.selectedAvatar;
   }
 
+  editProfile(): void {
+    this.profileService.editProfile();
+  }
 }

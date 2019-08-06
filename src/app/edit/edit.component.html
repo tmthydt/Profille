@@ -1,3 +1,49 @@
-<p>
-  edit works!
-</p>
+<!-- <form
+  #updateProfileForm="ngForm"
+  (ngSubmit)="setUserProfile(updateProfileForm)"
+>
+  <label for="">Name</label>
+  <input type="text" ngModel name="name" />
+  <label for="">Contact</label>
+  <input type="text" ngModel name="contact" />
+  <label for="">Bio</label>
+  <textarea name="bio" id="" cols="30" rows="10" ngModel></textarea>
+  <button>Update</button>
+</form> -->
+
+<form
+  novalidate
+  #userProfileForm="ngForm"
+  (ngSubmit)="setUserProfile(userProfile)"
+>
+  <h4>Use the form below to update your profile.</h4>
+  <p class="avatarText">Select your avatar</p>
+  <div class="avatar-container">
+    <img
+      class="avatar"
+      *ngFor="let avatar of avatars; index as i"
+      (click)="selectAvatar(i)"
+      [ngClass]="{
+        selected: this.avatar.selected,
+        notSelected: !this.avatar.selected
+      }"
+      src="{{ avatar.url }}"
+      alt=""
+    />
+  </div>
+  <label class="leftLabel" for="name">Name</label>
+  <input
+    type="text"
+    name="name"
+    [(ngModel)]="profileService.userProfile.name"
+  />
+  <label class="leftLabel" for="contact">Contact</label>
+  <input
+    type="text"
+    name="contact"
+    [(ngModel)]="profileService.userProfile.contact"
+  />
+  <label class="leftLabel" for="bio">Bio</label>
+  <textarea name="bio" [(ngModel)]="profileService.userProfile.bio"></textarea>
+  <button>Update</button>
+</form>

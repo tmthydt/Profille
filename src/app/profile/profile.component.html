@@ -1,3 +1,13 @@
-<p>
-  profile works!
-</p>
+<div class="profile">
+  <div class="image">
+    <img
+      class="avatar"
+      src="{{ selectedAvatar }}"
+      alt="Please select an avatar!"
+    />
+  </div>
+  <p class="name">{{ userProfile.name }}</p>
+  <p class="contact">{{ userProfile.contact }}</p>
+  <p class="bio">{{ userProfile.bio }}</p>
+  <button (click)="editProfile()">Edit</button>
+</div>

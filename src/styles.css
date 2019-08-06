@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css?family=Work+Sans&display=swap");
+
+body {
+  background-color: #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Work Sans", sans-serif;
+}
+
+form,
+.profile {
+  /* border: 1px solid black; */
+  box-shadow: 0px 0px 10px 0px rgba(204, 204, 204, 1);
+  width: 400px;
+}
+
+form,
+.profile {
+  border-radius: 15px;
+}
+
+button {
+  background-color: #505355;
+  margin: 20px;
+  padding: 12px;
+  font-size: 20px;
+  color: #eee;
+}
+
+button:hover {
+  background-color: #5becd8;
+}

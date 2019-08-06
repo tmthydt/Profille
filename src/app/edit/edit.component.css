@@ -1,0 +1,85 @@
+form {
+  background-color: #eee;
+  padding: 10px;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+}
+
+h4,
+label,
+input,
+textarea,
+button,
+p {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+input {
+  padding: 14px;
+}
+
+input,
+textarea,
+button {
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 20px;
+  width: 90%;
+}
+
+input,
+textarea {
+  font-size: 16px;
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+  padding: 10px;
+}
+
+.leftLabel {
+  display: block;
+  margin: 10px 0px 10px 25px;
+  color: #1ecefd;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+.avatar-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 55%;
+  margin-left: 100px;
+}
+
+.avatarText {
+  color: #1ecefd;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #eee;
+}
+
+.avatar:hover {
+  cursor: pointer;
+  border: 2px solid #1ecefd;
+}
+
+.selected {
+  border: 2px solid #1ecefd;
+}
+
+.notSelected {
+  border: 2px solid #eee;
+}

@@ -1,0 +1,50 @@
+.profile {
+  background-color: #fff;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+}
+
+.image {
+  position: relative;
+  height: 200px;
+  width: 100%;
+  background-color: #1ecefd;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+img {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.avatar {
+  width: 200px;
+  height: 200px;
+}
+
+p {
+  margin: 0;
+  margin-left: 20px;
+}
+
+.name {
+  font-size: 26px;
+  margin-top: 30px;
+}
+
+.contact {
+  color: #eee;
+}
+
+.bio {
+  margin: 15px 0px 0px 20px;
+}
+
+button {
+  width: 90%;
+  border-radius: 20px;
+}
